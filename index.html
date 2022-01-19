@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="The game of Pig is a very simple jeopardy dice game in which two players
+      race to reach 100 points. Each turn, a player repeatedly rolls a die
+      until either a 1 is rolled or the player holds and scores the sum of the
+      rolls."
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img src="dice-5.webp" alt="Playing dice" class="dice hidden" />
+      <ion-icon
+        name="information-outline"
+        class="btn btn--info show-modal"
+      ></ion-icon>
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <section class="modal hidden">
+      <p class="aboutHeading">🎲 About the game</p>
+      <p class="aboutText">
+        The game of Pig is a very simple jeopardy dice game in which two players
+        race to reach 100 points. Each turn, a player repeatedly rolls a die
+        until either a 1 is rolled or the player holds and scores the sum of the
+        rolls. At any time during a player's turn, the player is faced with two
+        decisions:
+      </p>
+      <ol class="aboutListOrdered">
+        <li>
+          <p><strong>Roll</strong> &HorizontalLine; If the player rolls a</p>
+          <ul class="aboutListUnordered">
+            <li>
+              <p>
+                <strong> 1:&ThickSpace;</strong>The player scores nothing and it
+                becomes the opponent's turn.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong> 2 - 6:&ThickSpace;</strong>The number is added to the
+                player's turn total and the player's turn continues
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>HOLD</strong> &HorizontalLine; The turn total is added to
+            the player's score and it becomes the opponent's turn.
+          </p>
+        </li>
+      </ol>
+      <ion-icon name="close-outline" class="close-modal"></ion-icon>
+    </section>
+    <div class="overlay hidden"></div>
+    <div class="overlay-mobile">
+      <p>💔 Sorry we are not yet available for small displays!</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="test-shivam.js"></script>
+  </body>
+</html>
