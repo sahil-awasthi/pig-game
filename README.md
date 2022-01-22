@@ -14,4 +14,6 @@ The game of Pig is a very simple jeopardy dice game in which two players race to
 
 #### HOLD ─ The turn total is added to the player's score and it becomes the opponent's turn.
 
+<p align="center"><a href="https://github.com/sahil-awasthi"><img width="100%" src="./pig-game.gif" alt="Playing Pig Game as gif"/></a></p>
+
 ###### Using for portfolio purpose :link:[Sahil Awasthi](https://linktr.ee/sahilawasthi)
